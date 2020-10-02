@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             String name = txtName.Text;
             String adress = txtAdress.Text;
 
-            MessageBox.Show(name+" "+adress);
+            MessageBox.Show("Hello " + name + " " + adress);
         }
 
         private void lstCity_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,6 +29,17 @@ namespace WindowsFormsApp1
             string text = lstCity.GetItemText(lstCity.SelectedItem);
 
             MessageBox.Show(text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.txtAdress.Text = "";
+            this.txtName.Text = "";
+            this.lstCity.SelectedItem = "";
+            this.rdFemale.Checked = false;
+            this.rdMale.Checked = false;
+            this.chkC.Checked = false;
+            this.chkASP.Checked = false;
         }
     }
 }
